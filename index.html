@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X2WIREFF | BIO</title>
+
+<link rel="icon" href="logo.png">
+
+<style>
+@font-face {
+    font-family: 'myFont';
+    src: url('Long_Shot.ttf');
+}
+
+/* ตัวแปร */
+:root { 
+    --accent: #00fddb; 
+    --bg-dark: #000000; 
+    --glass: rgba(10, 10, 15, 0.85); 
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body { 
+    font-family: 'myFont'; 
+    background: var(--bg-dark); 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+}
+
+/* พื้นหลัง */
+.main-bg { 
+    position: fixed; 
+    inset: 0; 
+    background: url('bg.gif') center/cover no-repeat; 
+    z-index: -3; 
+    filter: brightness(0.4);
+}
+
+.overlay { 
+    position: fixed; 
+    inset: 0; 
+    background: rgba(0,0,0,0.6); 
+    z-index: -1; 
+}
+
+/* layout */
+.dashboard-container { 
+    display: flex; 
+    gap: 24px; 
+    width: 900px; 
+    max-width: 95vw; 
+}
+
+/* glass */
+.glass-panel { 
+    background: var(--glass); 
+    backdrop-filter: blur(20px); 
+    border-radius: 25px; 
+    padding: 30px; 
+    flex: 1;
+}
+
+/* profile */
+.profile-side {
+    text-align: center;
+}
+
+.avatar-container img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.badge-container { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 10px;
+}
+
+.badge-icon { 
+    width: 20px; 
+}
+
+/* skill */
+.skill-item { 
+    margin-bottom: 20px; 
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.label span {
+    color: var(--accent);
+}
+
+.progress-container { 
+    height: 6px; 
+    background: #222; 
+    border-radius: 10px; 
+}
+
+.progress-bar { 
+    height: 100%; 
+    background: linear-gradient(90deg, var(--accent), #a855f7); 
+    border-radius: 10px; 
+}
+
+/* กล่องข้อความ */
+.info-box {
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #3b82f6;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.info-box p {
+    font-size: 12px;
+    opacity: 0.7;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+/* title */
+h1 {
+    font-size: 32px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-bg"></div>
+<div class="overlay"></div>
+
+<div class="dashboard-container">
+
+    <!-- PROFILE -->
+    <div class="glass-panel profile-side">
+        <div class="avatar-container">
+            <img src="logo.png">
+        </div>
+
+        <h1>X2WIREFF</h1>
+
+        <div class="badge-container">
+            <!-- ใส่รูป badge ทีหลังได้ -->
+        </div>
+    </div>
+
+    <!-- SKILL -->
+    <div class="glass-panel">
+
+        <div class="skill-item">
+            <div class="label">
+                HTML
+                <span>30%</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width:30%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="label">
+                PYTHON
+                <span>1%</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width:1%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="label">
+                JAVASCRIPT
+                <span>1%</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width:1%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="label">
+                LUA
+                <span>5%</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width:5%"></div>
+            </div>
+        </div>
+
+        <!-- INFO -->
+        <div class="info-box">
+            <p>i'm start with coding.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
